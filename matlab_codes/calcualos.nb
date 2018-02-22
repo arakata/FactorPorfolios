@@ -1,0 +1,193 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6265,        184]
+NotebookOptionsPosition[      5952,        168]
+NotebookOutlinePosition[      6294,        183]
+CellTagsIndexPosition[      6251,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "T", ",", "E1", ",", "E2", ",", "Ep", ",", "X", ",", "Y", ",", "Ep"}], 
+  "]"}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"X", "=", 
+    RowBox[{
+     SuperscriptBox["\[Theta]", "2"], "*", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"T", "-", "N", "-", "1"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "N", "-", "4"}], ")"}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"T", "-", "2"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"T", "-", "N", "-", "2"}], ")"}]}]], "*", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        FractionBox["N", "T"], 
+        RowBox[{
+         StyleBox[
+          SuperscriptBox["\[Theta]", "2"],
+          FontSize->24], 
+         StyleBox["+",
+          FontSize->24], 
+         RowBox[{
+          FractionBox[
+           StyleBox[
+            SuperscriptBox["\[Theta]", "2"],
+            FontSize->24], 
+           SuperscriptBox["\[Psi]", "2"]], "*", 
+          FractionBox["N", "T"]}]}]]}], ")"}]}]}], ";"}],
+  FontSize->24], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"Y", "=", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[Psi]", "2"], "*", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "1"}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "4"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"T", "-", "2"}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "2"}], ")"}]}]], "*", 
+      RowBox[{"(", 
+       FractionBox[
+        SuperscriptBox["\[Psi]", "2"], 
+        RowBox[{
+         SuperscriptBox["\[Psi]", "2"], "+", 
+         FractionBox["N", "T"]}]], ")"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[Theta]", "2"], "-", 
+        SuperscriptBox["\[Psi]", "2"]}], ")"}], "*", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "1"}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "4"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"T", "-", "2"}], ")"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", "N", "-", "2"}], ")"}]}]]}]}]}], ";"}],
+  FontSize->24], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"Ep", "=", 
+    RowBox[{"Y", "-", "X"}]}], ";"}],
+  FontSize->24], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FullSimplify", "[", "Ep", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Q1", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"T", "-", "N"}], ")"}], "*", 
+     RowBox[{"(", 
+      RowBox[{"T", "-", "N", "-", "3"}], ")"}]}], 
+    RowBox[{"(", 
+     RowBox[{"T", "-", "N", "-", "1"}], ")"}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Q2", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"T", "-", "N", "-", "1"}], ")"}], "*", 
+     RowBox[{"(", 
+      RowBox[{"T", "-", "N", "-", "4"}], ")"}]}], 
+    RowBox[{"(", 
+     RowBox[{"T", "-", "N", "-", "2"}], ")"}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Q2", "-", "Q1"}], "==", "0"}], ",", 
+    RowBox[{"{", "T", "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6877190894944506`*^9, 3.687719468834854*^9}, {
+   3.6877195177559323`*^9, 3.6877195939748793`*^9}, {3.689715225160442*^9, 
+   3.6897152379321527`*^9}, {3.6897152898091507`*^9, 
+   3.6897153435260963`*^9}, {3.689715378113616*^9, 3.6897153827792068`*^9}, {
+   3.689715447300229*^9, 3.689715467847891*^9}, {3.68971552803363*^9, 
+   3.689715569898354*^9}, {3.689715655809821*^9, 3.6897156621039224`*^9}, {
+   3.689716214905237*^9, 3.689716484514138*^9}, {3.689716514985371*^9, 
+   3.689716588781252*^9}, {3.6897166589443846`*^9, 3.6897166641754494`*^9}, {
+   3.689716792774137*^9, 3.6897168326816216`*^9}, 3.689716902159072*^9, {
+   3.6897169501722827`*^9, 3.689716954408594*^9}, 3.689716985769407*^9, {
+   3.689717085684353*^9, 3.6897170928374004`*^9}, {3.6931609827078495`*^9, 
+   3.693161016424277*^9}, {3.6931610482479367`*^9, 3.693161049748023*^9}, {
+   3.693161086754695*^9, 3.69316108691743*^9}, {3.6931612832793007`*^9, 
+   3.6931613011037884`*^9}, {3.6931613357620945`*^9, 3.693161349493532*^9}, {
+   3.6931614039721146`*^9, 3.6931614147999935`*^9}, {3.6931616448332443`*^9, 
+   3.6931616487702208`*^9}, {3.6931616825894337`*^9, 3.693161685389519*^9}, {
+   3.693161837332124*^9, 3.693161839679467*^9}, {3.693161960032485*^9, 
+   3.6931619702632732`*^9}, {3.6931621328030415`*^9, 
+   3.6931621455225873`*^9}, {3.693162466572279*^9, 3.693162468085814*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.6897165803595095`*^9, 3.6897165964391093`*^9}, 
+   3.689716834323042*^9, 3.689716905216281*^9, {3.6897169818616495`*^9, 
+   3.6897169937735586`*^9}, {3.6897170893647656`*^9, 
+   3.6897170947255116`*^9}, {3.693160970509519*^9, 3.6931610208960934`*^9}, 
+   3.6931610551735487`*^9, 3.6931610912439775`*^9, {3.6931612859166193`*^9, 
+   3.693161306195809*^9}, 3.6931613531785793`*^9, 3.693161425195599*^9, 
+   3.693161650436868*^9, 3.6931618446906567`*^9, 3.693161972730877*^9, 
+   3.693162153575345*^9, 3.69316247011886*^9, 3.694810643075653*^9}]
+}, Open  ]]
+},
+WindowSize->{767, 677},
+WindowMargins->{{196, Automatic}, {38, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4760, 133, 501, "Input"],
+Cell[5343, 157, 593, 8, 64, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

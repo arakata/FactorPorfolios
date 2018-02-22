@@ -1,0 +1,5 @@
+% functions
+function calU = calU(w_vec, mu_vec, sigma_mat, gamma)
+	(mu_vec')*w_vec-(gamma/2)*((w_vec')*(sigma_mat*w_vec))
+end
+
