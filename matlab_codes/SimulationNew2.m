@@ -2,7 +2,7 @@ KK=0;
 for T = [50 80 120 200 500 1000]
 KK = KK+1;
     display(T)
-    NS 	= 20000;
+    NS 	= 1000;
 
     % Assume: Parameters Unknown
 
